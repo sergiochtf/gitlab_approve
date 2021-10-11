@@ -1,0 +1,19 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Remove the Gitlab's Approve button",
+    "version": "1.0",
+    "description": "We have decided not to use the Gitlab's Approve button, so this extension removes the HTML code to prevent click it by accident",
+    "icons": { "16": "icon16.png",
+      "48": "icon48.png",
+     "128": "icon128.png" },
+    "content_scripts": [
+      {
+      "matches": [
+          "https://your_gitlab_url_here"
+          ],
+      "js": ["content.js"]
+      }
+  ], 
+    "manifest_version": 2
+  }
